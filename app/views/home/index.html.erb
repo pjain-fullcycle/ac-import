@@ -1,0 +1,11 @@
+<h1>Home#index</h1>
+
+
+<%= form_tag '#', method: :post, remote: true, multipart: true , class: 'csv-form form-inline' do %>
+  <%= file_field_tag :data, class: 'form-control' %>
+  <%= hidden_field_tag 'import_id' %>
+  <%= button_tag 'Import', class: 'csv-btn btn btn-primary mb-2', type: 'button' %>
+<% end %>
+
+
+<%= render partial: 'list' %>
